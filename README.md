@@ -52,9 +52,11 @@ This app leverages Redux Toolkit to define slices and reducers for managing cat 
 - Redux Saga - Handles API calls and updates the state once data is fetched.
 
 ## ⚙️ Scripts
+```plaintext
 yarn dev - Start the development server
 yarn build - Build the project for production
 yarn preview - Preview the production build locally
+```
 
 This template provides an overview of the project's purpose, features, setup instructions, and the technical stack used. You can modify sections as needed to match any specific details or changes in your project.
    
