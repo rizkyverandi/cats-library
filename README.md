@@ -29,7 +29,7 @@ To set up the project locally:
    Open your browser and navigate to http://localhost:5173 to view the app.
    ```
 ## 📄 Project Structure
-
+```plaintext
 cat-library/
 ├── public/               # Static files
 ├── src/
@@ -41,6 +41,7 @@ cat-library/
 ├── .eslintrc.js          # Linting configuration
 ├── vite.config.js        # Vite configuration
 └── README.md             # Project documentation
+```
 
 ## 🔄 State Management
 
