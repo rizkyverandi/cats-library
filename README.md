@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# 🐱 Cat Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple web application to showcase a library of cats, displaying their pictures and descriptions. This project is built with [Vite.js](https://vitejs.dev/) using the React template, and it uses [Redux Toolkit](https://redux-toolkit.js.org/) and [Redux-Saga](https://redux-saga.js.org/) for state management.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Fetch and display a list of cats with images and descriptions
+- State management with Redux Toolkit and Redux-Saga
+- Responsive design for mobile and desktop views
+- Fast and optimized development experience with Vite.js
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** - Frontend library for building user interfaces
+- **Vite.js** - Fast and minimalistic development server and build tool
+- **Redux Toolkit** - Simplified state management for Redux
+- **Redux-Saga** - Handling side effects in Redux, such as async data fetching
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To set up the project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/rizkyverandi/cats-library.git
+   cd cats-library
+   yarn install
+   yarn dev
+   Open your browser and navigate to http://localhost:5173 to view the app.
+   ```
+## 📄 Project Structure
+```plaintext
+cat-library/
+├── public/               # Static files
+├── src/
+│   ├── components/       # Reusable React components (e.g., Card, Loading)
+│   ├── features/         # Redux features and sagas
+│   ├── store/            # Redux store configuration (e.g., customHooks, rootSaga, rootReducer, store)
+│   ├── App.jsx           # Root component
+│   └── main.jsx          # Entry point
+├── .eslintrc.js          # Linting configuration
+├── vite.config.js        # Vite configuration
+└── README.md             # Project documentation
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🔄 State Management
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This app leverages Redux Toolkit to define slices and reducers for managing cat data and Redux-Saga to handle asynchronous operations, such as API calls for fetching cat images and descriptions.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+**Key Concepts**
+- Redux Toolkit - Manages cat data and loading state.
+- Redux Saga - Handles API calls and updates the state once data is fetched.
+
+## ⚙️ Scripts
+```plaintext
+yarn dev - Start the development server
+yarn build - Build the project for production
+yarn preview - Preview the production build locally
 ```
+
+This template provides an overview of the project's purpose, features, setup instructions, and the technical stack used. You can modify sections as needed to match any specific details or changes in your project.
+   
